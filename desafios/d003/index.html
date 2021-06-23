@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes e depois</title>
+    <style>
+        body{
+            font: 12pt Arial;
+            }
+        button{ font-size: 12pt;
+                padding: 30px;
+            }
+    </style>
+</head>
+<body>
+    <h1>Antes e depois</h1>
+    <button onclick="iniciar()">Antecessor e sucessor</button>
+    <script>
+        function iniciar(){
+            let n = Number(window.prompt('Qual o seu nome?'))
+            window.alert(`Antes de ${n}, temos o número ${n-1}. Depois de ${n}, temos o número${n+1}`)
+        }
+    </script>
+</body>
+</html>

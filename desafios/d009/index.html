@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajustar salário</title>
+    <style>
+        body{
+            font: 12pt Arial;
+            }
+        button{ font-size: 12pt;
+                padding: 30px;
+            }
+    </style>
+</head>
+<body>
+    <h1>Reajuste salarial</h1>
+    <button onclick="iniciar()">Reajustar salário</button>
+    <section id="resultado">
+        <p>Clique no botão acima para iniciar</p>
+    </section>
+    <script>
+        function iniciar(){
+            let nome = window.prompt('Digite o nome do funcionário:')
+            let salario = Number(window.prompt(`Digite o salário atual do(a) ${nome}:`))
+            let por = Number(window.prompt(`O salário atual do(a) ${nome} vai ser reajustado em qual porcentagem?`))
+            let aumento = salario*(por/100)
+
+            let res = window.document.getElementById('resultado')
+            res.innerHTML = `<h1>${nome} recebeu um aumento salarial!</h1><p>O salário era de ${salario.toLocaleString('pt-BR',{style:'currency', currency: 'BRL'})}.</p><p>Com um aumento de ${por}%, o salário vai aumentar ${aumento.toLocaleString('pt-BR',{style:'currency', currency: 'BRL'})} no próximo mês</p><p>E a partir daí, ${nome} vai passar a ganhar ${(salario+aumento).toLocaleString('pt-BR',{style:'currency', currency: 'BRL'})}.</p>`        
+        }
+    </script>
+</body>
+</html>

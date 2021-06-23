@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situação do aluno</title>
+    <style>
+        body{
+            font: 12pt Arial;
+            }
+        button{ font-size: 12pt;
+                padding: 30px;
+            }
+        #aprovado{
+            font-weight: bold;
+            color: rgb(18, 173, 18) ; 
+            background-color:rgb(65, 255, 65);
+        }
+        #reprovado{
+            font-weight: bold;
+            color: rgb(146, 0, 0) ;
+            background-color:rgba(255, 0, 0, 0.685);
+        }
+        #recuperacao{
+            font-weight: bold;
+            color: rgb(151, 139, 0);
+            background-color:rgb(255, 234, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1>Situação do aluno</h1>
+    <button onclick="entrar()">Entrar com as notas</button>
+    <p id="res">Clique no botão acima para informar as notas do aluno.</p>
+    <script src="script.js"></script>
+</body>
+</html>
+

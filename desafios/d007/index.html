@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor monetário</title>
+    <style>
+        body{
+            font: 12pt Arial;
+            }
+        button{ font-size: 12pt;
+                padding: 30px;
+            }
+    </style>
+</head>
+<body>
+    <h1>Conversor monetário (R$ -> US$) </h1>
+    <button onclick="iniciar()">Converter</button>
+    <section id="resultado">
+        <p>Clique no botão acima para iniciar</p>
+    </section>
+    <script>
+        var cot = Number(window.prompt('Digite a cotação atual do dólar(US$):'))
+        function iniciar(){
+            let carteira = Number(window.prompt('Quantos R$ você tem na carteira?'))
+            let dol = carteira / cot
+            let res = window.document.getElementById('resultado')
+            res.innerHTML = `<p>Com a cotação atual, <mark> US$ 1,00 = ${cot.toLocaleString('pt-BR',{style:'currency', currency: 'BRL'})}</mark>, você irá conseguir comprar ${dol.toLocaleString('pt-BR',{style:'currency', currency: 'USD'})}</p> `
+        }
+    </script>
+</body>
+</html>
